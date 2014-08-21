@@ -7,16 +7,31 @@ class NetworksController < ApplicationController
   end
 
   def sign_in
-    @request_token = session[:request_token]
-    @host = request.host
-    redirect_to Authorizer.request_token(@request_token, @host).authorize_url
+    session[:request_token] = Authorizer.request_token(session[:request_token], request.host)
+    redirect_to session[:request_token].authorize_url
+  end
+
+  def sign_out
+    User.destroy_all
+    session.clear
+    redirect_to root_path
   end
 
   def auth
-    # @access_token = request_token.get_access_token(:oauth_verifier => params[:oauth_verifier])
-    # puts @access_token
-    # session.delete(:request_token)
-    # save_token(@access_token)
+    @access_token = Authorizer.request_token(session[:request_token], request.host).get_access_token(:oauth_verifier => params[:oauth_verifier])
+    session.delete(:request_token)
+    Authorizer.save_token(@access_token)
+    redirect_to load_path
+  end
+
+  def load
+    @token = Authorizer.instantiate_token
+    @timeline = JSON.parse(@token.get('https://api.twitter.com/1.1/statuses/user_timeline.json?count=200').body)
+    @mentions = JSON.parse(@token.get('https://api.twitter.com/1.1/statuses/mentions_timeline.json?count=200').body)
+    @user = JSON.parse(@token.get('https://api.twitter.com/1.1/account/verify_credentials.json').body)
+    @friends = JSON.parse(@token.get('https://api.twitter.com/1.1/friends/list.json?count=200').body)
+    @followers = JSON.parse(@token.get('https://api.twitter.com/1.1/followers/list.json?count=200').body)
+    redirect_to index_path
   end
 
 end

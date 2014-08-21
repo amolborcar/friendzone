@@ -9,3 +9,37 @@
   height: 28px;
   vertical-align: middle;
 }
+
+.twitter-blue-bg {
+  background-color: #C0DEED;
+}
+
+.twitter-banner-bg {
+  width: 100%;
+  background-image: url('https://abs.twimg.com/images/themes/theme1/bg.png');
+  height: 190px;
+}
+
+.container-full {
+  height: 100vh;
+  background-color: #C0DEED;
+}
+
+.lemon{font-family: 'Lemon', cursive;}
+.kavoon{font-family: 'Kavoon', cursive;}
+
+.notopmargin {
+  margin-top: 0;
+}
+
+.space-down {
+  margin-top: 75px;
+}
+
+.alone {
+  clear:both;
+}
+
+.search-box {
+  font-size: 24px;
+}

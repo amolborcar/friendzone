@@ -25,6 +25,14 @@ class Authorizer
   end
 
   def self.instantiate_token
-    OAuth::AccessToken.new(OAuth::Consumer.new(ENV['TWITTER_KEY'], ENV['TWITTER_SECRET'], :site => "https://api.twitter.com"), User.all[0].token_key, User.all[0].token_secret)
+    OAuth::AccessToken.new(
+      OAuth::Consumer.new(
+        ENV['TWITTER_KEY'],
+        ENV['TWITTER_SECRET'],
+        :site => "https://api.twitter.com"
+      ),
+      User.all[0].token_key,
+      User.all[0].token_secret
+    )
   end
 end
