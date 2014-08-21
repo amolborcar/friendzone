@@ -1,0 +1,2967 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 19:29:55 -0700
+Connecting to database specified by database.yml
+
+PG::ConnectionBad (FATAL:  database "friendzone_development" does not exist
+):
+  activerecord (3.2.19) lib/active_record/connection_adapters/postgresql_adapter.rb:1222:in `initialize'
+  activerecord (3.2.19) lib/active_record/connection_adapters/postgresql_adapter.rb:1222:in `new'
+  activerecord (3.2.19) lib/active_record/connection_adapters/postgresql_adapter.rb:1222:in `connect'
+  activerecord (3.2.19) lib/active_record/connection_adapters/postgresql_adapter.rb:324:in `initialize'
+  activerecord (3.2.19) lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `new'
+  activerecord (3.2.19) lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `postgresql_connection'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  activerecord (3.2.19) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.19) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `_run__2577817424295581493__call__3133025935530554892__callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 19:30:09 -0700
+Connecting to database specified by database.yml
+
+ActionController::RoutingError (uninitialized constant NetworksController):
+  activesupport (3.2.19) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.19) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.19) lib/active_support/inflector/methods.rb:229:in `constantize'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.19) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.19) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.19) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `_run__629325193497811170__call__2398106704218028257__callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.19) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.19) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 19:31:13 -0700
+
+TypeError (superclass mismatch for class ApplicationController):
+  app/controllers/networks_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 19:31:27 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (1.0ms)
+Compiled application.css  (0ms)  (pid 40969)
+Compiled jquery.js  (8ms)  (pid 40969)
+Compiled jquery_ujs.js  (0ms)  (pid 40969)
+Compiled application.js  (26ms)  (pid 40969)
+Completed 200 OK in 57.2ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 19:31:27 -0700
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 19:31:27 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 19:31:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 19:31:27 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=&commit=Search" for 127.0.0.1 at 2014-08-20 19:32:08 -0700
+Processing by NetworksController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"", "commit"=>"Search"}
+  Rendered networks/search.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5.7ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 19:32:08 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 19:32:08 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 19:32:08 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 19:32:08 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 19:32:20 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3.0ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 19:32:20 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 19:32:20 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 19:32:20 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 19:32:20 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=&commit=Search" for 127.0.0.1 at 2014-08-20 19:32:21 -0700
+Processing by NetworksController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"", "commit"=>"Search"}
+  Rendered networks/search.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5.2ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 19:32:21 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 19:32:21 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 19:32:21 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 19:32:21 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 19:35:16 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 5.3ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 19:35:16 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 19:35:16 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 19:35:16 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 19:35:16 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 19:35:25 -0700
+Processing by NetworksController#index as HTML
+Completed 500 Internal Server Error in 2.4ms
+
+NameError (undefined local variable or method `sessions' for #<NetworksController:0x007fa4157b54d8>):
+  app/controllers/networks_controller.rb:4:in `index'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 19:35:28 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 5.3ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 19:35:28 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 19:35:28 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 19:35:28 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 19:35:28 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 19:35:35 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 5.5ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 19:35:35 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 19:35:35 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 19:35:35 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 19:35:35 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 19:39:31 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (1.6ms)
+Compiled index.css  (0ms)  (pid 40969)
+Compiled application.css  (11ms)  (pid 40969)
+Completed 200 OK in 26.8ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 19:39:31 -0700
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 19:39:31 -0700
+Served asset /index.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 19:39:31 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 19:39:31 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 19:39:31 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/images/sign-in-with-twitter-gray.png" for 127.0.0.1 at 2014-08-20 19:39:31 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/sign-in-with-twitter-gray.png"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 19:40:25 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3.9ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 19:40:25 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 19:40:25 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 19:40:25 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 19:40:25 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 19:40:25 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 19:40:30 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.4ms)
+Compiled index.css  (0ms)  (pid 40969)
+Compiled application.css  (0ms)  (pid 40969)
+Completed 200 OK in 22.0ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 19:40:31 -0700
+Served asset /index.css - 200 OK (7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 19:40:31 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 19:40:31 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 19:40:31 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 19:40:31 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/sign-in-with-twitter-gray.png" for 127.0.0.1 at 2014-08-20 19:40:31 -0700
+Served asset /images/sign-in-with-twitter-gray.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/sign-in-with-twitter-gray.png"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 19:40:33 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.4ms)
+Compiled index.css  (0ms)  (pid 40969)
+Compiled application.css  (1ms)  (pid 40969)
+Completed 200 OK in 25.5ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 19:40:33 -0700
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 19:40:33 -0700
+Served asset /index.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 19:40:33 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 19:40:33 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 19:40:33 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/sign-in-with-twitter-gray.png" for 127.0.0.1 at 2014-08-20 19:40:33 -0700
+Served asset /images/sign-in-with-twitter-gray.png - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/sign-in-with-twitter-gray.png"):
+  actionpack (3.2.19) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.19) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.19) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.19) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.19) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.19) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.19) lib/rails/engine.rb:484:in `call'
+  railties (3.2.19) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.19) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 19:40:40 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.3ms)
+Compiled index.css  (0ms)  (pid 40969)
+Compiled application.css  (0ms)  (pid 40969)
+Completed 200 OK in 10.6ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 19:40:41 -0700
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 19:40:41 -0700
+Served asset /index.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 19:40:41 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 19:40:41 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 19:40:41 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sign-in-with-twitter-gray.png" for 127.0.0.1 at 2014-08-20 19:40:41 -0700
+Served asset /sign-in-with-twitter-gray.png - 200 OK (6ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 19:40:50 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3.8ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 19:40:51 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 19:40:51 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 19:40:51 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 19:40:51 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 19:40:51 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (46.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (3.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20140821025934)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (61.5ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "screen_name" text, "token_key" character varying(255), "token_secret" character varying(255)) [0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140821025934')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:11:59 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 7.8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:11:59 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:11:59 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:11:59 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:11:59 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:11:59 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:12:01 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 3.9ms
+
+NameError (undefined local variable or method `request_token' for #<NetworksController:0x007fa41561f218>):
+  app/controllers/networks_controller.rb:10:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.5ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:12:11 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 2.0ms
+
+NameError (undefined local variable or method `request_token' for #<NetworksController:0x007fa415bb1a00>):
+  app/controllers/networks_controller.rb:10:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:14:23 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4.9ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:14:23 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:14:23 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:14:23 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:14:23 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:14:23 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:14:24 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3.8ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:14:24 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:14:24 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:14:24 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:14:24 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:14:24 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:14:25 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 2.8ms
+
+NameError (undefined local variable or method `session' for Authorizer:Class):
+  app/models/authorizer.rb:13:in `request_token'
+  app/controllers/networks_controller.rb:10:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:15:07 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 0.2ms
+
+NameError (undefined local variable or method `session' for Authorizer:Class):
+  app/models/authorizer.rb:13:in `request_token'
+  app/controllers/networks_controller.rb:10:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:17:33 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5.5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:17:33 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:17:33 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:17:33 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:17:33 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:17:33 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:17:34 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 4.4ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/models/authorizer.rb:12:in `request_token'
+  app/controllers/networks_controller.rb:11:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:18:29 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5.4ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:18:29 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:18:29 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:18:29 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:18:29 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:18:29 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:18:30 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 2.4ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/models/authorizer.rb:12:in `request_token'
+  app/controllers/networks_controller.rb:12:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:19:02 -0700
+Connecting to database specified by database.yml
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 32.2ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:19:02 -0700
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:19:02 -0700
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:19:02 -0700
+Served asset /index.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:19:02 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:19:02 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:19:03 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3.9ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:19:03 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:19:03 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:19:03 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:19:03 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:19:03 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:19:04 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 3.0ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/models/authorizer.rb:12:in `request_token'
+  app/controllers/networks_controller.rb:11:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:22:00 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4.5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:22:01 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:22:01 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:22:01 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:22:01 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:22:01 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:22:01 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 3.0ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/models/authorizer.rb:12:in `request_token'
+  app/controllers/networks_controller.rb:11:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:24:02 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4.7ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:24:02 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:24:02 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:24:02 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:24:02 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:24:02 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:24:03 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 2.3ms
+
+NameError (undefined local variable or method `request' for Authorizer:Class):
+  app/models/authorizer.rb:14:in `request_token'
+  app/controllers/networks_controller.rb:11:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:25:54 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5.1ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:25:54 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:25:54 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:25:54 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:25:54 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:25:55 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:25:55 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 781.9ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:25:56 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:25:56 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:25:56 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:25:56 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:25:56 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:26:04 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 583.1ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:26:04 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:26:04 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:26:04 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:26:04 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:26:04 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:26:25 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 583.8ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:26:26 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:26:26 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:26:26 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:26:26 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:26:26 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:26:28 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 116.0ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:26:28 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:26:28 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:26:28 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:26:28 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:26:28 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:28:19 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 5.7ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:28:19 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:28:19 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:19 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:19 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:19 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:28:20 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4.6ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:28:20 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:28:20 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:20 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:20 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:20 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:28:21 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 189.1ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:28:21 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:21 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:21 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:28:21 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:21 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-08-20 20:28:24 -0700
+Processing by NetworksController#auth as HTML
+  Rendered networks/auth.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4.7ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:28:24 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:24 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:24 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:24 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:28:24 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:28:30 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/auth.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 145.2ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:28:31 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:28:31 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:31 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:31 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:31 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:28:33 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 7.4ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:33 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:33 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:33 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:28:33 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:28:33 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:28:34 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3.6ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:34 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:28:34 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:28:34 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:34 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:34 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:28:35 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/auth.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 534.5ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:28:36 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:28:36 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:36 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:36 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:36 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:28:45 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 1286.7ms
+
+NoMethodError (undefined method `redirect' for #<NetworksController:0x007fcabb1aa918>):
+  app/controllers/networks_controller.rb:13:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:28:46 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 6.8ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:28:47 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:47 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:47 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:28:47 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:28:47 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:28:48 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 532.0ms
+
+NoMethodError (undefined method `redirect' for #<NetworksController:0x007fcabe501cf8>):
+  app/controllers/networks_controller.rb:13:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:29:27 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 5.9ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:29:27 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:29:27 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:29:27 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:29:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:29:27 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:29:28 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5.4ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:29:28 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:29:28 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:29:28 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:29:28 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:29:28 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:29:44 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4.7ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:29:44 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:29:44 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:29:44 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:29:44 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:29:44 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:29:47 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 173.0ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:29:47 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:29:47 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:29:47 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:29:47 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:29:47 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:38:10 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4.6ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:38:10 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:38:10 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:38:10 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:38:10 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:38:10 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:38:11 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 1.9ms
+
+NameError (uninitialized constant Authorizer::TwitterOAuth):
+  app/models/authorizer.rb:3:in `check_login'
+  app/controllers/networks_controller.rb:13:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.9ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:38:26 -0700
+Connecting to database specified by database.yml
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 30.6ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:38:27 -0700
+Served asset /index.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:38:27 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:38:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:38:27 -0700
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:38:27 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:38:28 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 3.1ms
+
+NameError (undefined local variable or method `oauth_confirm_url' for Authorizer:Class):
+  app/models/authorizer.rb:8:in `check_login'
+  app/controllers/networks_controller.rb:13:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:41:26 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 5.9ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:41:27 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:41:27 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:41:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:41:27 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:41:27 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:41:28 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 569.9ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:41:28 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:41:28 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:41:28 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:41:28 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:41:28 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:42:17 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3.9ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:42:17 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:42:17 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:42:17 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:42:17 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:42:17 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:42:17 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 5.9ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:42:18 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:42:18 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:42:18 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:42:18 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:42:18 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:42:19 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 572.6ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:42:20 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:42:20 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:42:20 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:42:20 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:42:20 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:42:22 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3.2ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:42:22 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:42:22 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:42:22 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:42:22 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:42:22 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:45:59 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3.6ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:45:59 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:45:59 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:45:59 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:45:59 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:45:59 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:46:00 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 1.6ms
+
+SyntaxError (/Users/Amol/Desktop/Programs/friendzone/app/models/authorizer.rb:8: syntax error, unexpected tLABEL
+..._token(:oauth_callback => http://www.placeholder.com)
+...                               ^
+/Users/Amol/Desktop/Programs/friendzone/app/models/authorizer.rb:8: unknown regexp options - www
+/Users/Amol/Desktop/Programs/friendzone/app/models/authorizer.rb:8: syntax error, unexpected ')', expecting keyword_end):
+  app/controllers/networks_controller.rb:13:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:46:04 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5.2ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:46:04 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:46:04 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:46:04 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:46:04 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:46:04 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:46:05 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 187.6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:46:05 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:46:05 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:46:05 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:46:05 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:46:05 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:47:12 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5.0ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:47:13 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:47:13 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:47:13 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:47:13 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:47:13 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:47:14 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 224.7ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:47:14 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:47:14 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:47:14 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:47:14 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:47:14 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:47:19 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 3.9ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:47:19 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:47:19 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:47:19 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:47:19 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:47:19 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:47:20 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 170.6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:47:20 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:47:20 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:47:20 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:47:20 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:47:20 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:47:56 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4.8ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:47:56 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:47:56 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:47:56 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:47:56 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:47:56 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:47:57 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 566.2ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:47:58 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:47:58 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:47:58 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:47:58 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:47:58 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:48:43 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3.5ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:48:43 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:48:43 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:48:43 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:48:43 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:48:43 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:48:47 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 286.1ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:48:47 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:48:47 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:48:47 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:48:47 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:48:47 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 20:49:06 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5.2ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:49:06 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:49:06 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:49:06 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:49:06 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:49:06 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:49:10 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 157.9ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:49:10 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:49:10 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:49:10 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:49:10 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:49:10 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 20:49:13 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 175.2ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 20:49:13 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 20:49:13 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 20:49:13 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 20:49:13 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 20:49:13 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 21:02:24 -0700
+Connecting to database specified by database.yml
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 36.0ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:02:24 -0700
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:02:24 -0700
+Served asset /index.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:02:24 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:02:24 -0700
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:02:24 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:02:25 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 1.8ms
+
+NoMethodError (undefined method `check_login' for Authorizer:Class):
+  app/controllers/networks_controller.rb:13:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.9ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:03:10 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 171.5ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:03:10 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:03:10 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:03:11 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:03:11 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:03:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:03:45 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 845.7ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:03:46 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:03:46 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:03:46 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:03:46 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:03:46 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:03:58 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 612.3ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:03:58 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:03:58 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:03:58 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:03:58 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:03:58 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:04:18 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 577.4ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:04:19 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:04:19 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:04:19 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:04:19 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:04:19 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:04:30 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 1.9ms
+
+NoMethodError (undefined method `get_request_token' for nil:NilClass):
+  app/models/authorizer.rb:17:in `request_token'
+  app/controllers/networks_controller.rb:12:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 21:05:46 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4.1ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:05:46 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:05:46 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:05:46 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:05:46 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:05:46 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 21:05:47 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3.9ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:05:47 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:05:47 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:05:47 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:05:47 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:05:47 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:05:47 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 169.8ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:05:48 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:05:48 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:05:48 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:05:48 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:05:48 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:05:51 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 105.5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:05:51 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:05:51 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:05:51 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:05:51 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:05:51 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:06:10 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 609.0ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:06:11 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:06:11 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:06:11 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:06:11 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:06:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-08-20 21:06:19 -0700
+Processing by NetworksController#auth as HTML
+Completed 500 Internal Server Error in 3.0ms
+
+NameError (undefined local variable or method `request_token' for #<NetworksController:0x007f874b841910>):
+  app/controllers/networks_controller.rb:17:in `auth'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 21:07:17 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5.8ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:07:17 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:07:17 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:07:17 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:07:17 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:07:17 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sign-in-with-twitter-gray.png" for 127.0.0.1 at 2014-08-20 21:07:17 -0700
+Served asset /sign-in-with-twitter-gray.png - 304 Not Modified (3ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:07:18 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 922.0ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:07:19 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:07:19 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:07:19 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:07:19 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:07:19 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:07:23 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 643.9ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:07:24 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:07:24 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:07:24 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:07:24 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:07:24 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:09:35 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 2.7ms
+
+NoMethodError (undefined method `get_request_token' for nil:NilClass):
+  app/models/authorizer.rb:17:in `request_token'
+  app/controllers/networks_controller.rb:12:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:09:40 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 0.6ms
+
+NoMethodError (undefined method `get_request_token' for nil:NilClass):
+  app/models/authorizer.rb:17:in `request_token'
+  app/controllers/networks_controller.rb:12:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.9ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:10:55 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 166.8ms
+
+NoMethodError (undefined method `authorize_url' for nil:NilClass):
+  app/controllers/networks_controller.rb:12:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.5ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:12:20 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 190.1ms
+
+NameError (undefined local variable or method `request_token' for #<NetworksController:0x007f8750143488>):
+  app/controllers/networks_controller.rb:13:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.5ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:13:41 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 159.8ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:13:41 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:13:41 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:13:41 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:13:41 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:13:41 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:13:45 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 113.1ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:13:45 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:13:45 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:13:45 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:13:45 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:13:45 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:14:00 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 531.5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:14:01 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:14:01 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:14:01 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:14:01 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:14:01 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:14:35 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1053.0ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:14:36 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:14:36 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:14:36 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:14:36 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:14:36 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 21:15:59 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5.8ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:16:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:16:00 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:16:00 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:16:00 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:16:00 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 21:16:12 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5.7ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:16:12 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:16:12 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:16:12 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:16:12 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:16:12 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:16:13 -0700
+Processing by NetworksController#sign_in as HTML
+Completed 500 Internal Server Error in 174.9ms
+
+NoMethodError (undefined method `redirect' for #<NetworksController:0x007f874dc1b250>):
+  app/controllers/networks_controller.rb:12:in `sign_in'
+
+
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Amol/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-3.2.19/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 21:16:33 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4.6ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:16:34 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:16:34 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:16:34 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:16:34 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:16:34 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:16:35 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 714.9ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:16:35 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:16:35 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:16:35 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:16:35 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:16:35 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 21:17:02 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5.2ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:17:03 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:17:03 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:17:03 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:17:03 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:17:03 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:17:05 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 550.3ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:17:05 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:17:05 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:17:05 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:17:05 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:17:05 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:17:15 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 162.8ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:17:15 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:17:15 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:17:15 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:17:15 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:17:15 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/auth?oauth_token=ARNJ7vLn0znvv4wI9eXxvEl5FTlwgsJMeXyI4A1lV4E&oauth_verifier=K0rZ8NWgHCzsncX3Lb0487mZCLsVWocCAUzB1NXewQ" for 127.0.0.1 at 2014-08-20 21:17:23 -0700
+Processing by NetworksController#auth as HTML
+  Parameters: {"oauth_token"=>"ARNJ7vLn0znvv4wI9eXxvEl5FTlwgsJMeXyI4A1lV4E", "oauth_verifier"=>"K0rZ8NWgHCzsncX3Lb0487mZCLsVWocCAUzB1NXewQ"}
+  Rendered networks/auth.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 5.2ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:17:23 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:17:23 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:17:23 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:17:23 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:17:23 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:18:18 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 746.9ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:18:19 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:18:19 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:18:19 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:18:19 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:18:19 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 21:18:21 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3.6ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:18:21 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:18:21 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:18:21 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:18:21 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:18:21 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:18:22 -0700
+Processing by NetworksController#sign_in as HTML
+  Rendered networks/sign_in.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 271.4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:18:23 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:18:23 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:18:23 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:18:23 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:18:23 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 21:19:11 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9.6ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:19:11 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:19:11 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:19:11 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:19:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:19:11 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-20 21:19:12 -0700
+Processing by NetworksController#index as HTML
+  Rendered networks/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4.2ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:19:12 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:19:12 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:19:12 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:19:12 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:19:12 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2014-08-20 21:19:13 -0700
+Processing by NetworksController#sign_in as HTML
+Redirected to https://api.twitter.com/oauth/authorize?oauth_token=YkJjWKVlVRKl16GR7dWFYlcI6qQhoi6IyERTyc8
+Completed 302 Found in 553.3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth?oauth_token=YkJjWKVlVRKl16GR7dWFYlcI6qQhoi6IyERTyc8&oauth_verifier=2YPS7W1oLIREgJbgHgL2venG7u147wpWpZbHjxds" for 127.0.0.1 at 2014-08-20 21:19:19 -0700
+Processing by NetworksController#auth as HTML
+  Parameters: {"oauth_token"=>"YkJjWKVlVRKl16GR7dWFYlcI6qQhoi6IyERTyc8", "oauth_verifier"=>"2YPS7W1oLIREgJbgHgL2venG7u147wpWpZbHjxds"}
+  Rendered networks/auth.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 6.5ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 21:19:19 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-08-20 21:19:19 -0700
+Served asset /index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 21:19:19 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 21:19:19 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 21:19:19 -0700
+Served asset /application.js - 304 Not Modified (0ms)

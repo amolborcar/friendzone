@@ -1,0 +1,11 @@
+.sign-in-button {
+  background-image: url('./sign-in-with-twitter-gray.png');
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  border: none;
+  cursor: pointer;
+  width: 158px;
+  height: 28px;
+  vertical-align: middle;
+}
