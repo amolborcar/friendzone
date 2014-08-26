@@ -12,7 +12,7 @@ class NetworksController < ApplicationController
   end
 
   def sign_out
-    User.destroy_all
+    TwitterLoader.clear_user_data
     session.clear
     redirect_to root_path
   end
@@ -31,6 +31,12 @@ class NetworksController < ApplicationController
     @user = JSON.parse(@token.get('https://api.twitter.com/1.1/account/verify_credentials.json').body)
     @friends = JSON.parse(@token.get('https://api.twitter.com/1.1/friends/list.json?count=200').body)
     @followers = JSON.parse(@token.get('https://api.twitter.com/1.1/followers/list.json?count=200').body)
+    # helper methods to load tweets into database
+    TwitterLoader.create_tweet_objects(@timeline, false)
+    TwitterLoader.create_tweet_objects(@mentions, true)
+    TwitterLoader.add_user_properties(@user)
+    TwitterLoader.create_friends(@friends)
+    TwitterLoader.create_followers(@followers)
     redirect_to index_path
   end
 

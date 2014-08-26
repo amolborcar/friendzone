@@ -20,9 +20,10 @@
   <div class = "container-full center">
 
     <div class = "twitter-banner-bg">
-      <form class = "sign_out" action = "/sign_out" method = "get">
-        <input type = "submit" value = "Sign out" class = " button button-big button-gray button-wide right m1">
-      </form>
+      <%= form_tag "/sign_out", method: 'get', class: "sign_out" do %>
+        <%= submit_tag "Sign Out", class: "button button-big button-gray button-wide right m1" %>
+      <% end %>
+
 
       <div class = "center alone">
         <h2 class = "h2 kavoon">Enter a Twitter handle below, then hit Search</h2>
@@ -35,10 +36,6 @@
     </div> <!-- end twitter-banner-bg -->
 
     <div class = "twitter-blue-bg space-down">
-
-      <div id = "new_tweet">
-
-      </div>
 
       <div id = "tweet_list">
 
