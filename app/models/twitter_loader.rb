@@ -1,4 +1,5 @@
 class TwitterLoader
+
   def self.clear_user_data
     Tweet.destroy_all
     Friend.destroy_all

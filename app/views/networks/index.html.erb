@@ -28,16 +28,17 @@
       <div class = "center alone">
         <h2 class = "h2 kavoon">Enter a Twitter handle below, then hit Search</h2>
 
-        <%= form_tag "/search", method: 'get', class: "form" do %>
-          <%= text_field_tag 'screenname', nil, placeholder: "Enter screenname here", class: "search-box field-big mr1", size: 50 %><br><br>
+        <%= form_tag url_for(action: :search, method: 'post'), class: "form searchform", remote: true do %>
+          <%= text_field_tag 'screen_name', nil, placeholder: "Enter screenname here", class: "search-box field-big mr1", size: 50 %><br><br>
           <%= submit_tag "Search", class: "button button-big button-blue button-wide" %>
         <% end %>
+
       </div> <!-- end center alone -->
     </div> <!-- end twitter-banner-bg -->
 
     <div class = "twitter-blue-bg space-down">
 
-      <div id = "tweet_list">
+      <div id = "tweet-list">
 
       </div>
 
