@@ -1,20 +1,20 @@
 <div class = "displayed-tweets center">
   <% if @my_tweets && @my_tweets.length > 0 %>
-    <h2 class = "h2 m2 fontdiner-swanky">Tweets you've made to <span class = "oleo underline"><%= @screen_name %></span></h2>
+    <h2 class = "h2 m2 cursive">Tweets you've made to <span class = "oleo underline"><%= @screen_name %></span></h2>
     <% @my_tweets.each do |tweet| %>
       <span class = "absolute-center"><%= sanitize tweet["html"] %></span>
     <% end %>
   <% end %>
 
   <% if @retweets && @retweets.length > 0 %>
-    <h2 class = "h2 m2 fontdiner-swanky"><span class = "oleo underline"><%= @screen_name %></span>'s Tweets you've retweeted</h2>
+    <h2 class = "h2 m2 cursive"><span class = "oleo underline"><%= @screen_name %></span>'s Tweets you've retweeted</h2>
     <% @retweets.each do |tweet| %>
       <span class = "absolute-center"><%= sanitize tweet["html"] %></span>
     <% end %>
   <% end %>
 
   <% if @mentions && @mentions.length > 0 %>
-    <h2 class = "h2 m2 fontdiner-swanky">Tweets <span class = "oleo underline"><%= @screen_name %></span> has mentioned you in</h2>
+    <h2 class = "h2 m2 cursive">Tweets <span class = "oleo underline"><%= @screen_name %></span> has mentioned you in</h2>
     <% @mentions.each do |tweet| %>
       <span class = "absolute-center"><%= sanitize tweet["html"] %></span>
     <% end %>

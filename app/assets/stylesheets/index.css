@@ -25,6 +25,11 @@
   background-color: #C0DEED;
 }
 
+.henny-penny{font-family: 'Henny Penny', cursive;}
+.oleo{font-family: 'Oleo Script', cursive;}
+.frijole{font-family: 'Frijole', cursive;}
+.cursive{font-family: cursive;}
+.chewy{font-family: 'Chewy', cursive;}
 .lemon{font-family: 'Lemon', cursive;}
 .kavoon{font-family: 'Kavoon', cursive;}
 
@@ -42,4 +47,8 @@
 
 .search-box {
   font-size: 24px;
+}
+
+.underline {
+  text-decoration: underline;
 }
