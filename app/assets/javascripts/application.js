@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require embedded
+//= require typeahead
 //= require_tree .

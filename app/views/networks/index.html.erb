@@ -29,7 +29,7 @@
         <h2 class = "h2 kavoon">Enter a Twitter handle below, then hit Search</h2>
 
         <%= form_tag url_for(action: :search, method: 'post'), class: "form searchform", remote: true do %>
-          <%= text_field_tag 'screen_name', nil, placeholder: "Enter screenname here", class: "search-box field-big mr1", size: 50 %><br><br>
+          <%= text_field_tag 'screen_name', nil, placeholder: "Enter screenname here", class: "search-box field-big mr1", id: "search-box", size: 50 %><br><br>
           <%= submit_tag "Search", class: "button button-big button-blue button-wide" %>
         <% end %>
 

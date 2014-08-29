@@ -1,3 +1,3 @@
 class Follower < ActiveRecord::Base
-  attr_accessible :screen_name
+  attr_accessible :name, :screen_name
 end

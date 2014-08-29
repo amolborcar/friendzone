@@ -7,6 +7,7 @@ Tweet.Controller.prototype = {
 
   init: function(){
     this.bindEventListeners();
+    this.view.initiateTypeahead();
   },
 
   bindEventListeners: function(){
