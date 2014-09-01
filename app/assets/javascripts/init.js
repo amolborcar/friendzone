@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
   tweetView = new Tweet.View();
-  tweetController = new Tweet.Controller(tweetView);
+  tweetModel = new Tweet.Model();
+  tweetController = new Tweet.Controller(tweetView, tweetModel);
   tweetController.init();
 
 })

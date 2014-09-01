@@ -1,5 +1,6 @@
-Tweet.Controller = function(view){
+Tweet.Controller = function(view, model){
   this.view = view;
+  this.model = model;
   self = this
 }
 
@@ -7,10 +8,14 @@ Tweet.Controller.prototype = {
 
   init: function(){
     this.bindEventListeners();
-    this.getAllNames();
+    this.model.getSearchSuggestions();
   },
 
   bindEventListeners: function(){
+
+    document.addEventListener('suggestions', function(){
+      self.view.loadSearchSuggestions(event.detail.nameList);
+    })
 
     $('#search-form').on('submit', function(){
       self.loadEmbeddedTweets(event.target);
@@ -34,33 +39,5 @@ Tweet.Controller.prototype = {
       console.log(data)
     })
   },
-
-  getAllNames: function(){
-    getNames = $.ajax({
-      url: '/find_all_names',
-      type: 'GET'
-    })
-
-    getNames.success(function(data){
-      self.constructSuggestionEngine(data);
-    })
-
-    getNames.fail(function(data){
-      console.log(data)
-      console.log('failure!')
-    })
-  },
-
-  constructSuggestionEngine: function(names){
-    var nameList = new Bloodhound({
-      datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
-      queryTokenizer: Bloodhound.tokenizers.whitespace,
-      local: $.map(names, function(name){
-        return { value: name };
-      })
-    });
-    self.view.initiateTypeahead(nameList);
-
-  }
 
 }

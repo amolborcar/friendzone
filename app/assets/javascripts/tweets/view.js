@@ -1,14 +1,14 @@
 Tweet.View = function(){}
 
 Tweet.View.prototype = {
+
   displayEmbeddedTweets: function(tweets){
     $('#tweet-list').empty().append(tweets).slideDown('slow');
     executeTweetFormatter();
   },
-  initiateTypeahead: function(nameList){
 
+  loadSearchSuggestions: function(nameList){
     nameList.initialize();
-
     $('#search-box').typeahead(
     {
       hint: true,
