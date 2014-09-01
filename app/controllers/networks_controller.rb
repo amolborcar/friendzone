@@ -38,11 +38,18 @@ class NetworksController < ApplicationController
 
   def search
     filterer = TwitterFilter.new
-    @screen_name = params[:screen_name]
-    @my_tweets = filterer.filter_tweets(@screen_name)
-    @retweets = filterer.filter_retweets(@screen_name)
-    @mentions = filterer.filter_mentions(User.first.screen_name, @screen_name)
+    @name = params[:name]
+    @screen_name = filterer.find_screen_name_by_name(@name)
+    @my_tweets = filterer.filter_tweets_by_name
+    @retweets = filterer.filter_retweets_by_name
+    @mentions = filterer.filter_mentions_by_name(User.first.screen_name)
     render partial: 'tweets/embedded'
+  end
+
+  def find_all_names
+    friends = Friend.pluck(:name)
+    followers = Follower.pluck(:name)
+    render :json => (friends+followers).uniq.sort
   end
 
 end

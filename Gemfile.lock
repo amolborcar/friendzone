@@ -103,6 +103,10 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+    twitter-typeahead-rails (0.10.5)
+      actionpack (>= 3.1)
+      jquery-rails
+      railties (>= 3.1)
     tzinfo (0.3.41)
     uglifier (2.5.3)
       execjs (>= 0.3.0)
@@ -120,4 +124,5 @@ DEPENDENCIES
   pg
   rails (= 3.2.19)
   sass-rails (~> 3.2.3)
+  twitter-typeahead-rails
   uglifier (>= 1.0.3)

@@ -7,13 +7,15 @@ Tweet.Controller.prototype = {
 
   init: function(){
     this.bindEventListeners();
-    this.view.initiateTypeahead();
+    this.getAllNames();
   },
 
   bindEventListeners: function(){
-    $('.searchform').on('submit', function(){
+
+    $('#search-form').on('submit', function(){
       self.loadEmbeddedTweets(event.target);
     })
+
   },
 
   loadEmbeddedTweets: function(form){
@@ -31,6 +33,34 @@ Tweet.Controller.prototype = {
       console.log("Failure!")
       console.log(data)
     })
+  },
+
+  getAllNames: function(){
+    getNames = $.ajax({
+      url: '/find_all_names',
+      type: 'GET'
+    })
+
+    getNames.success(function(data){
+      self.constructSuggestionEngine(data);
+    })
+
+    getNames.fail(function(data){
+      console.log(data)
+      console.log('failure!')
+    })
+  },
+
+  constructSuggestionEngine: function(names){
+    var nameList = new Bloodhound({
+      datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+      queryTokenizer: Bloodhound.tokenizers.whitespace,
+      local: $.map(names, function(name){
+        return { value: name };
+      })
+    });
+    self.view.initiateTypeahead(nameList);
+
   }
 
 }

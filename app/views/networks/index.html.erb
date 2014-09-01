@@ -3,7 +3,7 @@
 
   <div class = "container-full">
     <div class = "twitter-banner-bg">
-      <h1 class = "h1 center kavoon notopmargin"> Welcome to Friend Zone! </h1>
+      <h1 class = "h1 center kavoon notopmargin"> Welcome to the Friend Zone! </h1>
       <p class = "h3 center lemon"> Sign in below to begin </p>
 
       <form class = "sign_in center" action = "/sign_in" method = "get">
@@ -26,10 +26,10 @@
 
 
       <div class = "center alone">
-        <h2 class = "h2 kavoon">Enter a Twitter handle below, then hit Search</h2>
+        <h2 class = "h2 kavoon">Enter a friend's name below, then hit Search</h2>
 
-        <%= form_tag url_for(action: :search, method: 'post'), class: "form searchform", remote: true do %>
-          <%= text_field_tag 'screen_name', nil, placeholder: "Enter screenname here", class: "search-box field-big mr1", id: "search-box", size: 50 %><br><br>
+        <%= form_tag url_for(action: :search, method: 'post'), class: "form searchform", id: "search-form", remote: true do %>
+          <%= text_field_tag 'name', nil, placeholder: "Enter screenname here", class: "search-box field-big mr1", id: "search-box", size: 50 %><br><br>
           <%= submit_tag "Search", class: "button button-big button-blue button-wide" %>
         <% end %>
 
