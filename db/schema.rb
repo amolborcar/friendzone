@@ -11,18 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140826041158) do
+ActiveRecord::Schema.define(:version => 20140829192938) do
 
   create_table "followers", :force => true do |t|
     t.string   "screen_name"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "name"
   end
 
   create_table "friends", :force => true do |t|
     t.string   "screen_name"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "name"
   end
 
   create_table "tweets", :force => true do |t|
@@ -41,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20140826041158) do
     t.text   "screen_name"
     t.string "token_key"
     t.string "token_secret"
+    t.string "name"
   end
 
 end

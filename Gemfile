@@ -26,6 +26,9 @@ end
 
 gem 'jquery-rails'
 
+# Twitter typeahead for search box
+gem 'twitter-typeahead-rails'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -1,5 +1,6 @@
-Tweet.Controller = function(view){
+Tweet.Controller = function(view, model){
   this.view = view;
+  this.model = model;
   self = this
 }
 
@@ -7,12 +8,19 @@ Tweet.Controller.prototype = {
 
   init: function(){
     this.bindEventListeners();
+    this.model.getSearchSuggestions();
   },
 
   bindEventListeners: function(){
-    $('.searchform').on('submit', function(){
+
+    document.addEventListener('suggestions', function(){
+      self.view.loadSearchSuggestions(event.detail.nameList);
+    })
+
+    $('#search-form').on('submit', function(){
       self.loadEmbeddedTweets(event.target);
     })
+
   },
 
   loadEmbeddedTweets: function(form){
@@ -30,6 +38,6 @@ Tweet.Controller.prototype = {
       console.log("Failure!")
       console.log(data)
     })
-  }
+  },
 
 }

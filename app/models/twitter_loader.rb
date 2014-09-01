@@ -23,18 +23,18 @@ class TwitterLoader
   end
 
   def self.add_user_properties(user)
-    User.all[0].update_attributes( screen_name: user["screen_name"] )
+    User.all[0].update_attributes( name: user["name"], screen_name: user["screen_name"] )
   end
 
   def self.create_friends(friends_objects)
     friends_objects["users"].each do |friend|
-      Friend.create( screen_name: friend["screen_name"] )
+      Friend.create( name: friend["name"], screen_name: friend["screen_name"] )
     end
   end
 
   def self.create_followers(followers_objects)
     followers_objects["users"].each do |follower|
-      Follower.create(screen_name: follower["screen_name"] )
+      Follower.create(name: follower["name"], screen_name: follower["screen_name"] )
     end
   end
 end

@@ -1,3 +1,3 @@
 class User < ActiveRecord::Base
-  attr_accessible :screen_name, :token_key, :token_secret
+  attr_accessible :name, :screen_name, :token_key, :token_secret
 end
