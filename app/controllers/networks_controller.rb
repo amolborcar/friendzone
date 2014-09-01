@@ -22,17 +22,8 @@ class NetworksController < ApplicationController
   end
 
   def load
-    @token = Authorizer.instantiate_token
-    @timeline = JSON.parse(@token.get('https://api.twitter.com/1.1/statuses/user_timeline.json?count=200').body)
-    @mentions = JSON.parse(@token.get('https://api.twitter.com/1.1/statuses/mentions_timeline.json?count=200').body)
-    @user = JSON.parse(@token.get('https://api.twitter.com/1.1/account/verify_credentials.json').body)
-    @friends = JSON.parse(@token.get('https://api.twitter.com/1.1/friends/list.json?count=200').body)
-    @followers = JSON.parse(@token.get('https://api.twitter.com/1.1/followers/list.json?count=200').body)
-    TwitterLoader.create_tweet_objects(@timeline, false)
-    TwitterLoader.create_tweet_objects(@mentions, true)
-    TwitterLoader.add_user_properties(@user)
-    TwitterLoader.create_friends(@friends)
-    TwitterLoader.create_followers(@followers)
+    fetcher = DataFetcher.new(Authorizer.instantiate_token)
+    fetcher.get_twitter_data
     redirect_to root_path
   end
 
