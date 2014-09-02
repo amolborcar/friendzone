@@ -2,8 +2,8 @@ class TwitterFilter
 
   def initialize
     @extractor = TweetExtractor.new
-    @tweet_arr = []
-    @retweet_arr = []
+    @tweets_arr = []
+    @retweets_arr = []
     @mentions_arr = []
     @screen_name
   end
@@ -14,49 +14,33 @@ class TwitterFilter
     else
       @screen_name = Follower.where("name like ?", name)[0]["screen_name"]
     end
-    @screen_name
   end
 
   def filter_tweets_by_name
-    @base_arr = Tweet.where("tweet_text LIKE ?", "%#{@screen_name}%")
-    @tweet_arr = @base_arr.select { |tweet| tweet["retweeted"] != true && tweet[:mention] != true }
-    @extractor.extract_ids(@tweet_arr)
+    base_arr = Tweet.where("tweet_text LIKE ?", "%#{@screen_name}%")
+    @tweets_arr = base_arr.select { |tweet| tweet["retweeted"] != true && tweet[:mention] != true }
+    @extractor.extract_ids(@tweets_arr)
   end
 
   def filter_retweets_by_name
-    @base_arr = Tweet.where("retweeted_status LIKE ?", "%#{@screen_name}%")
-    @retweet_arr = @base_arr.select { |tweet| tweet["retweeted"] == true }
-    @extractor.extract_ids(@retweet_arr)
+    base_arr = Tweet.where("retweeted_status LIKE ?", "%#{@screen_name}%")
+    @retweets_arr = base_arr.select { |tweet| tweet["retweeted"] == true }
+    @extractor.extract_ids(@retweets_arr)
   end
 
   def filter_mentions_by_name(username)
-    @base_arr = Tweet.where("tweet_text LIKE ?", "%#{username}%")
-    @mentions_arr = @base_arr.select { |tweet| tweet[:mention] == true && tweet["user_who_posted"]["screen_name"] == @screen_name }
+    base_arr = Tweet.where("tweet_text LIKE ?", "%#{username}%")
+    @mentions_arr = base_arr.select { |tweet| tweet[:mention] == true && tweet["user_who_posted"]["screen_name"] == @screen_name }
     @extractor.extract_ids(@mentions_arr)
   end
 
-  # def filter_tweets_by_screenname(friend)
-  #   # NEED TO CHANGE TO GET NAME INSTEAD OF SCREENNAME
-  #   clean_screenname = friend[1..-1]
-  #   @base_arr = Tweet.where("tweet_text LIKE ?", "%#{clean_screenname}%")
-  #   @tweet_arr = @base_arr.select { |tweet| tweet["retweeted"] != true && tweet[:mention] != true }
-  #   @extractor.extract_ids(@tweet_arr)
-  # end
+  def count_tweets
+    counts = {
+      tweets_count: @tweets_arr.length,
+      retweets_count: @retweets_arr.length,
+      mentions_count: @mentions_arr.length
+    }
+  end
 
-  # def filter_retweets_by_screenname(friend)
-  #   # NEED TO CHANGE TO GET NAME INSTEAD OF SCREENNAME
-  #   clean_screenname = friend[1..-1]
-  #   @base_arr = Tweet.where("retweeted_status LIKE ?", "%#{clean_screenname}%")
-  #   @retweet_arr = @base_arr.select { |tweet| tweet["retweeted"] == true }
-  #   @extractor.extract_ids(@retweet_arr)
-  # end
-
-  # def filter_mentions_by_screenname(username, friend)
-  #   # NEED TO CHANGE TO GET NAME INSTEAD OF SCREENNAME
-  #   clean_screenname = friend[1..-1]
-  #   @base_arr = Tweet.where("tweet_text LIKE ?", "%#{username}%")
-  #   @mentions_arr = @base_arr.select { |tweet| tweet[:mention] == true && tweet["user_who_posted"]["screen_name"] == clean_screenname }
-  #   @extractor.extract_ids(@mentions_arr)
-  # end
 
 end
