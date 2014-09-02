@@ -10,6 +10,7 @@ gem 'dotenv-rails', :groups => [:development, :test]
 gem 'pg'
 
 gem 'oauth'
+gem 'facebook_oauth'
 gem 'httparty'
 
 # Gems used only for assets and not required

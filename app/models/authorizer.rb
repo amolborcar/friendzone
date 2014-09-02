@@ -15,7 +15,7 @@ class Authorizer
       host_and_port << ":3000" if host == "localhost"
       request_token = Authorizer.oauth_consumer.get_request_token(
         # This redirects to the /auth route
-        :oauth_callback => "http://#{host_and_port}/auth")
+        :oauth_callback => "http://#{host_and_port}/auth_twitter")
     end
     request_token
   end
@@ -34,5 +34,20 @@ class Authorizer
       User.all[0].token_key,
       User.all[0].token_secret
     )
+  end
+
+  def self.create_facebook_client(host_and_port)
+    host_and_port << ":3000" if host_and_port == "localhost"
+    client = FacebookOAuth::Client.new(
+      :application_id => ENV['FACEBOOK_ID'],
+      :application_secret => ENV['FACEBOOK_SECRET'],
+      :callback => 'http://localhost:3000/auth_facebook'
+      # :callback => 'http://#{host_and_port}/auth_facebook'
+      # :callback => 'http://www.placeholder.com'
+    )
+  end
+
+  def self.authorize_facebook_request(client)
+    client.authorize_url
   end
 end
