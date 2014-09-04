@@ -9,6 +9,7 @@ Friendzone::Application.routes.draw do
   get 'auth_facebook', to: 'networks#auth_facebook'
   get 'load_facebook', to: 'networks#load_facebook'
   get 'find_all_names', to: 'networks#find_all_names'
+  get 'tweets/get_dates_of_tweets', to: 'tweets#get_dates_of_tweets'
   root to: 'networks#index'
 
 end

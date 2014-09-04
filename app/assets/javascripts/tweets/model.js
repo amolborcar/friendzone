@@ -32,6 +32,22 @@ Tweet.Model.prototype = {
       }
     })
     document.dispatchEvent(suggestions)
+  },
+
+  getDatesOfTweets: function(){
+    getDates = $.ajax({
+      url: 'tweets/get_dates_of_tweets',
+      type: 'GET'
+    })
+
+    getDates.success(function(data){
+      console.log(data);
+    })
+
+    getDates.fail(function(data){
+      console.log("Failure!")
+      console.log(data)
+    })
   }
 
 }

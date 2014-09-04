@@ -19,6 +19,7 @@ Tweet.Controller.prototype = {
 
     $('#search-form').on('submit', function(){
       self.loadEmbeddedTweets(event.target);
+      self.model.getDatesOfTweets();
     })
 
   },

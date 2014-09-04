@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require embedded
 //= require twitter/typeahead
+//= require /Highcarts-4.0.4/js/highcharts
 //= require_tree .
