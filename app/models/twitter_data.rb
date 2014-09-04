@@ -15,7 +15,7 @@ class TwitterData
     Tweet.all.each do |tweet|
       @tweet_dates["#{tweet['tweet_created_at'].year}_#{tweet['tweet_created_at'].month}"]+= 1
     end
-    puts @tweet_dates
+    return @tweet_dates
   end
 
 end

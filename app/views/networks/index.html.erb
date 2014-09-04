@@ -26,27 +26,38 @@
 
 
       <div class = "center alone">
+        <h1 class = "h1 kavoon"> Welcome to the Friend Zone </h1>
+        <h1 class = "h1 kavoon"> (the good kind) </h1>
+        <h2 class = "h2 kavoon"> Select an option below </h2>
+        <button class = "button button-big button-gray button-wide" id = "analytics-toggle">Analytics</button>
+        <button class = "button button-big button-gray button-wide" id = "search-toggle">Search</button>
+      </div>
+      <div class = "center alone hidden space-down" id = "search-area">
         <h2 class = "h2 kavoon">Enter a friend's name below, then hit Search</h2>
         <%= form_tag url_for(action: :search, method: 'post'), class: "form searchform", id: "search-form", remote: true do %>
           <%= text_field_tag 'name', nil, placeholder: "Enter screenname here", class: "search-box field-big mr1", id: "search-box", size: 50 %><br><br>
           <%= submit_tag "Search", class: "button button-big button-blue button-wide" %>
         <% end %>
 
-      </div> <!-- end center alone -->
+        <div class = "twitter-blue-bg">
+
+          <div id = "tweet-list">
+
+          </div>
+
+        </div>
+
+      </div> <!-- end search-area-->
+
+      <div class = "center alone hidden space-down" id = "analytics-area">
+        <h3 class = "h3 kavoon"> History </h3>
+        <div id = "time-series-chart">
+        </div>
+
+      </div> <!-- end analytics-area -->
     </div> <!-- end twitter-banner-bg -->
 
-    <div class = "twitter-blue-bg space-down">
-
-      <div id = "tweet-list">
-
-      </div>
-
-      <div id = "facebook-list">
-
-      </div>
-
-    </div>
-  </div>
+  </div> <!-- end container - after login -->
 
 
 <% end %>
