@@ -6,16 +6,19 @@ class TwitterData
     months = (01..12).to_a
     years.each do |year|
       months.each do |month|
-        @tweet_dates["#{year}_#{month}"] = 0;
+        @tweet_dates["#{month} #{year}"] = 0;
       end
     end
   end
 
   def count_dates_of_tweets
     Tweet.all.each do |tweet|
-      @tweet_dates["#{tweet['tweet_created_at'].year}_#{tweet['tweet_created_at'].month}"]+= 1
+      @tweet_dates["#{tweet['tweet_created_at'].month} #{tweet['tweet_created_at'].year}"]+= 1
     end
-    return @tweet_dates
+    # dates = @tweet_dates.map do |pair|
+      # TODO: translate date strings into Date format using regex
+    # end
+    return { dates: @tweet_dates.keys, values: @tweet_dates.values }
   end
 
 end

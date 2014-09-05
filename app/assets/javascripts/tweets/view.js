@@ -20,5 +20,9 @@ Tweet.View.prototype = {
       displayKey: 'value',
       source: nameList.ttAdapter()
     })
+  },
+
+  animateNumberOfTweetsChart: function(chart_options){
+    $('#time-series-chart').highcharts(chart_options);
   }
 }

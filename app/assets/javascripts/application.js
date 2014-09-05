@@ -13,6 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require embedded
-//= require highcharts
+//= require highstock
 //= require twitter/typeahead
 //= require_tree .
