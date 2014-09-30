@@ -10,6 +10,7 @@ Tweet.Controller.prototype = {
     this.bindEventListeners();
     this.model.getSearchSuggestions();
     self.model.getDatesOfTweets();
+    self.model.getSentimentOfTweets();
   },
 
   bindEventListeners: function(){

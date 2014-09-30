@@ -51,6 +51,23 @@ Tweet.Model.prototype = {
     })
   },
 
+  getSentimentOfTweets: function(){
+    getSentiments = $.ajax({
+      url: 'tweets/get_sentiment_of_tweets',
+      type: 'GET'
+    })
+
+    getSentiments.success(function(data){
+      chartOptions = this.createNumberOfTweetsTemplate(data);
+      console.log(data)
+    }.bind(this))
+
+    getDates.fail(function(data){
+      console.log("Failure!")
+      console.log(data)
+    })
+  },
+
   createNumberOfTweetsTemplate: function(counts){
     chartOptions = {
       chart: {
