@@ -52,3 +52,11 @@
 .underline {
   text-decoration: underline;
 }
+
+.hidden {
+  display: none;
+}
+
+.width-80-perc {
+  width: 80%;
+}

@@ -1,7 +1,7 @@
 Tweet.Controller = function(view, model){
   this.view = view;
   this.model = model;
-  self = this
+  self = this;
 }
 
 Tweet.Controller.prototype = {
@@ -9,6 +9,7 @@ Tweet.Controller.prototype = {
   init: function(){
     this.bindEventListeners();
     this.model.getSearchSuggestions();
+    self.model.getDatesOfTweets();
   },
 
   bindEventListeners: function(){
@@ -19,6 +20,16 @@ Tweet.Controller.prototype = {
 
     $('#search-form').on('submit', function(){
       self.loadEmbeddedTweets(event.target);
+    })
+
+    $('#search-toggle').on('click', function(){
+      $('#search-area').toggleClass('hidden');
+      $('#analytics-area').addClass('hidden');
+    })
+
+    $('#analytics-toggle').on('click', function(){
+      $('#analytics-area').toggleClass('hidden');
+      $('#search-area').addClass('hidden');
     })
 
   },
@@ -38,6 +49,6 @@ Tweet.Controller.prototype = {
       console.log("Failure!")
       console.log(data)
     })
-  },
+  }
 
 }
