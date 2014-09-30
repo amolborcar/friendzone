@@ -22,7 +22,7 @@ Tweet.View.prototype = {
     })
   },
 
-  animateNumberOfTweetsChart: function(chart_options){
-    $('#time-series-chart').highcharts(chart_options);
+  animateNumberOfTweetsChart: function(chartOptions){
+    $('#time-series-chart').highcharts(chartOptions);
   }
 }

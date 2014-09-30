@@ -21,4 +21,12 @@ class TwitterData
     return { dates: @tweet_dates.keys, values: @tweet_dates.values }
   end
 
+  def get_sentiment_of_tweets
+    # Call the HP Sentiment API on text of all tweets
+    Tweet.all.each do |tweet|
+      tweet['tweet_text']
+    end
+
+  end
+
 end

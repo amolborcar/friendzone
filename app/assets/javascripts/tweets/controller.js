@@ -1,7 +1,7 @@
 Tweet.Controller = function(view, model){
   this.view = view;
   this.model = model;
-  self = this
+  self = this;
 }
 
 Tweet.Controller.prototype = {
@@ -24,10 +24,12 @@ Tweet.Controller.prototype = {
 
     $('#search-toggle').on('click', function(){
       $('#search-area').toggleClass('hidden');
+      $('#analytics-area').addClass('hidden');
     })
 
     $('#analytics-toggle').on('click', function(){
       $('#analytics-area').toggleClass('hidden');
+      $('#search-area').addClass('hidden');
     })
 
   },

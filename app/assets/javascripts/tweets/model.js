@@ -41,8 +41,8 @@ Tweet.Model.prototype = {
     })
 
     getDates.success(function(data){
-      chart_options = this.createNumberOfTweetsTemplate(data);
-      self.view.animateNumberOfTweetsChart(chart_options);
+      chartOptions = this.createNumberOfTweetsTemplate(data);
+      self.view.animateNumberOfTweetsChart(chartOptions);
     }.bind(this))
 
     getDates.fail(function(data){
@@ -52,7 +52,7 @@ Tweet.Model.prototype = {
   },
 
   createNumberOfTweetsTemplate: function(counts){
-    chart_options = {
+    chartOptions = {
       chart: {
         type: 'column',
         backgroundColor: '#C0DEED',
@@ -100,7 +100,7 @@ Tweet.Model.prototype = {
         data: counts.values
       }]
     }
-    return chart_options
+    return chartOptions
   }
 
 }
